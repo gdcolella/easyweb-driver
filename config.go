@@ -1,4 +1,4 @@
 package main
 
-var SERVER = "easyweb-164801.appspot.com:80"
-var WEBSITE = "http://easyweb-164801.appspot.com/view_messages"
+var SERVER = "35.185.80.120:8080"
+var WEBSITE = "http://" + SERVER + "/view_messages"
