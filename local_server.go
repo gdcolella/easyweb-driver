@@ -26,6 +26,11 @@ func take_hdmi_f(w http.ResponseWriter, r *http.Request) {
 	sendResponse(CommandResp{Response: "HDMI"}, w, r)
 }
 
+func release_hdmi_f(w http.ResponseWriter, r *http.Request) {
+	release_hdmi()
+	sendResponse(CommandResp{Response: "HDMI Released"}, w, r)
+}
+
 func restart_f(w http.ResponseWriter, r *http.Request) {
 	restart()
 	sendResponse(CommandResp{Response: "Restarting"}, w, r)
@@ -50,6 +55,7 @@ func write_f(w http.ResponseWriter, r *http.Request) {
 
 func serve() {
 	http.HandleFunc("/hdmi", take_hdmi_f)
+	http.HandleFunc("/hdmi_release", release_hdmi_f)
 	http.HandleFunc("/restart", restart_f)
 	http.HandleFunc("/status", status_f)
 	http.HandleFunc("/read", read_f)

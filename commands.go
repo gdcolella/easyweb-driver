@@ -13,6 +13,10 @@ func take_hdmi() {
 	log.Print("Took HDMI")
 }
 
+func release_hdmi() {
+	exec.Command("/bin/bash", "-c", "echo \"tx 80:00:20:00\" | cec-client -s -d 1").Start()
+}
+
 func open_browser() {
 	exec.Command("/usr/bin/chromium-browser", "--kiosk", WEBSITE, "--incognito", "--disable-infobars", "--use-fake-ui-for-media-stream").Start()
 	log.Print("Opened browser.")
