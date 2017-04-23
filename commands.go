@@ -14,7 +14,7 @@ func take_hdmi() {
 }
 
 func release_hdmi() {
-	exec.Command("/bin/bash", "-c", "echo \"tx 80:00:20:00\" | cec-client -s -d 1").Start()
+	exec.Command("/bin/bash", "-c", "echo \"tx 4f:82:20:00\" | cec-client -s -d 1").Start()
 }
 
 func open_browser() {
