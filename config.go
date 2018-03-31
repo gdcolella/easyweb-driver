@@ -1,4 +1,4 @@
 package main
 
-var SERVER = "35.185.80.120:8080"
-var WEBSITE = "http://" + SERVER + "/view_messages"
+var SERVER = "didtoday-93038.firebaseapp.com:443"
+var WEBSITE = "https://" + SERVER + "/"
