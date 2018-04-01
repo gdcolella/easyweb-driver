@@ -18,6 +18,6 @@ func release_hdmi() {
 }
 
 func open_browser() {
-	exec.Command("/usr/bin/chromium-browser", "--kiosk", WEBSITE, "--incognito", "--disable-infobars", "--use-fake-ui-for-media-stream").Start()
+	exec.Command("/usr/bin/chromium-browser", "--kiosk", WEBSITE, "--auto-open-devtools-for-tabs", "--disable-infobars", "--use-fake-ui-for-media-stream").Start()
 	log.Print("Opened browser.")
 }
